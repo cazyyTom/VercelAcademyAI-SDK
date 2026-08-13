@@ -19,3 +19,38 @@ I wanted hands-on depth with the Vercel AI SDK specifically — `generateObject`
 Next.js 15 · TypeScript · Vercel AI SDK · Vercel AI Gateway (unified provider access across OpenAI/Anthropic, automatic retries, usage monitoring) · Tailwind CSS v4 · shadcn/ui
 
 ## Project structure
+
+```
+app/
+  (1-extraction)/        # CLI extraction lesson
+  (2-classification)/    # CLI classification lesson
+  (3-summarization)/     # Web summarization lesson
+  (4-extraction)/        # Web extraction lesson (advanced)
+  (5-chatbot)/           # Web chatbot lesson
+  page.tsx               # Navigation homepage
+components/ui/           # Reusable UI components
+lib/                     # Utility functions
+```
+
+## Running locally
+
+```bash
+pnpm install
+vercel link
+vercel deploy
+vercel env pull        # generates .env.local with a 12-hour VERCEL_OIDC_TOKEN
+vercel dev
+```
+
+CLI lessons:
+
+```bash
+pnpm run extraction
+pnpm run classification
+```
+
+Web lessons (summarization, extraction, chatbot) — visit `localhost:3000` and navigate from the homepage.
+
+## Credit
+
+Built while completing Vercel's official [AI SDK Academy course](https://vercel.com/academy/ai-sdk). Course structure and starter scaffolding are Vercel's; all lesson implementations in this repo are my own.
